@@ -14,8 +14,8 @@ var tempX = 0;
     if (tempX < 0){tempX = 0;}
     if (tempY < 0){tempY = 0;}  
 
-    document.Show.MouseX.value = tempX;//MouseX is textbox
-    document.Show.MouseY.value = tempY;//MouseY is textbox
+    document.Show.X.value = tempX;//X is textbox
+    document.Show.Y.value = tempY;//Y is textbox
 
     return true;
   }
