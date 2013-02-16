@@ -14,7 +14,7 @@ function onClick(ev) {
 function setUp() {
   gomb = document.getElementById('gomb');
   outputContainer = document.getElementById('output');
-  gomb.addEventListener('click', onClick);
+  gomb.addEventListener('mousemove', onClick);
 }
 
 document.addEventListener('DOMContentLoaded', setUp);
