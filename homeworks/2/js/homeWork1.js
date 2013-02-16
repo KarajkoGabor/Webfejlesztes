@@ -23,7 +23,7 @@ function setbackground()
     var letters = '0123456789ABCDEF'.split(''); // letters
     var color = '#'; // hex first letter
     for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.round(Math.random() * 30)]; //random numbers
+        color += letters[Math.round(Math.random() * 15)]; //random numbers
     }
 
 document.getElementsByTagName("body")[0].style.backgroundColor = color; //set the color
