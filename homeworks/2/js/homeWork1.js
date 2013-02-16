@@ -11,7 +11,7 @@ function createNewOutput(msg) {
 
 function onClick(ev) {
   //createNewOutput( ++counter + '. kattintás');
-  onMouseMove();
+  onMouseMove;
 }
 
 function onMouseMove(){
