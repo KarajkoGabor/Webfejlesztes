@@ -24,7 +24,7 @@ function onMouseMove(){
 
 function setUp() {
   //outputContainer = document.getElementById('output');
-  gomb.addEventListener('mousemove', onClick);
+  gomb.addEventListener('click', onClick);
 }
 
 document.addEventListener('DOMContentLoaded', setUp);
