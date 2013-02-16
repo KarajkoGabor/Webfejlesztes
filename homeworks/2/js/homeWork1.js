@@ -26,7 +26,7 @@ function onMouseMove(ev){
 function setUp() {
   //outputContainer = document.getElementById('output');
   gomb = document.getElementById('gomb');
-  gomb.addEventListener('click', onMouseMove);
+  gomb.addEventListener('mousemove', onMouseMove);
 }
 
 document.addEventListener('DOMContentLoaded', setUp);
