@@ -1,7 +1,7 @@
 var gomb, outputContainer;
 var counter = 0;
-var gomb = document.getElementById('gomb');
 var w = 600, h = 400; // width and height
+gomb = document.getElementById('gomb');
 
 function createNewOutput(msg) {
   var li = document.createElement('li');
@@ -15,6 +15,7 @@ function onClick(ev) {
 }
 
 function onMouseMove(){
+
   newWidth = Math.floor(Math.random()*w);
   newHeight = Math.floor(Math.random()*h);
   gomb.style.position="absolute";
