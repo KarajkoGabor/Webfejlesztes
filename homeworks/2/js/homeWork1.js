@@ -59,7 +59,7 @@ document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValu
 function setUp() {
   //outputContainer = document.getElementById('output');
   gomb = document.getElementById('gomb');
-  setbackground;
+  setbackground();
   gomb.addEventListener('mousemove', onMouseMove);
   gomb.addEventListener('click', onClick);
 }
