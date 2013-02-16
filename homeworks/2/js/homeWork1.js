@@ -29,7 +29,7 @@ function onMouseMove(ev){
 
 function setbackground()
 {
-window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay
+//window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay
 
 var index = Math.round(Math.random() * 9);
 
