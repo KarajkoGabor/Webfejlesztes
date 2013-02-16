@@ -2,7 +2,7 @@
 var clickMe = (function(){
   "use strict";
 var gomb;
-var w = 800, h = 600; // width and height
+
 
 function onClick(ev) { //click
   window.alert("Ügyes vagy! De lehet hogy csaltál ;) ");
@@ -10,11 +10,11 @@ function onClick(ev) { //click
 
 function onMouseMove(ev){
 
-  
+  var w = 800, h = 600; // width and height
 
   gomb = document.getElementById('gomb'); //gomb
-  newWidth = Math.floor(Math.random()*w); //random width
-  newHeight = Math.floor(Math.random()*h); //random height
+  var newWidth = Math.floor(Math.random()*w); //random width
+  var newHeight = Math.floor(Math.random()*h); //random height
   gomb.style.position="absolute"; //position
   gomb.style.left=newWidth+"px"; //left align
   gomb.style.top=newHeight+"px"; //top align
@@ -41,5 +41,6 @@ function setUp() {
   gomb.addEventListener('click', onClick); //click listener
 }
   return setUp;
+
 })();
 document.addEventListener('DOMContentLoaded', clickMe); //if content loaded
