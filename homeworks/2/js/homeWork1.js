@@ -4,3 +4,5 @@ function onMouseMove()
     document.getElementById('divCoord').innerText = s;
 
 }
+
+document.addEventListener('DOMContentLoaded', onMouseMove);
