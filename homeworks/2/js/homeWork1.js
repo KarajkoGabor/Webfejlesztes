@@ -10,7 +10,7 @@ function createNewOutput(msg) {
 }
 
 function onClick(ev) {
-  window.alert("Ügyes vagy!");
+  window.alert("Ügyes vagy! De lehet hogy csaltál ;) ");
 }
 
 function onMouseMove(ev){
