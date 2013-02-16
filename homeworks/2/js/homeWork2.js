@@ -1,9 +1,9 @@
 var clickMe = {
-  gomb:null;
+  gomb:null,
 
   onClick:function(ev) { //click
     window.alert("Ügyes vagy! De lehet hogy csaltál ;) ");
-  }
+  },
 
   onMouseMove:function(ev){
 
@@ -17,7 +17,7 @@ var clickMe = {
     clickMe.gomb.style.top=newHeight+"px"; //top align
 
     clickMe.setbackground(); // random background when hovering the button
-  }
+  },
 
   setbackground:function ()
   {
@@ -29,13 +29,13 @@ var clickMe = {
 
   document.getElementsByTagName("body")[0].style.backgroundColor = color; //set the color
 
-  }
+  },
 
   setUp:function () {
     clickMe.gomb = document.getElementById('gomb'); 
     clickMe.gomb.addEventListener('mousemove', clickMe.onMouseMove); //hovering listener
     clickMe.gomb.addEventListener('click', clickMe.onClick); //click listener
-  }
+  },
 
 }
 document.addEventListener('DOMContentLoaded', clickMe.setUp); //if content loaded
