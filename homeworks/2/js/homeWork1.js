@@ -1,6 +1,6 @@
 var gomb, outputContainer;
 var counter = 0;
-var w = 600, h = 400; // width and height
+var w = 1024, h = 768; // width and height
 
 
 function createNewOutput(msg) {
@@ -22,14 +22,14 @@ function onMouseMove(ev){
   gomb.style.left=newWidth+"px";
   gomb.style.top=newHeight+"px";
 
-    setbackground();
+  setbackground();
 }
 
 
 
 function setbackground()
 {
-//window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay
+/*//window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay
 
 var index = Math.round(Math.random() * 9);
 
@@ -52,9 +52,15 @@ ColorValue = "FFFF99"; //lt yellow
 if(index == 8)
 ColorValue = "FFCC99"; //lt orange
 if(index == 9)
-ColorValue = "CCCCCC"; //lt grey
+ColorValue = "CCCCCC"; //lt grey*/
 
-document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+
+document.getElementsByTagName("body")[0].style.backgroundColor = color;
 
 }
 
