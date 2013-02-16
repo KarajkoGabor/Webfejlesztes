@@ -14,8 +14,11 @@ var tempX = 0;
     if (tempX < 0){tempX = 0;}
     if (tempY < 0){tempY = 0;}  
 
-    document.Show.X.value = tempX;//X is textbox
-    document.Show.Y.value = tempY;//Y is textbox
+    document.getElementById('X').value = tempX;
+    document.getElementById('Y').value = tempY;
+
+    //document.Show.X.value = tempX;//X is textbox
+    //document.Show.Y.value = tempY;//Y is textbox
 
     return true;
   }
