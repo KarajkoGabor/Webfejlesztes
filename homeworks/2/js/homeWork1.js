@@ -14,7 +14,7 @@ function onClick(ev) {
   onMouseMove;
 }
 
-function onMouseMove(){
+function onMouseMove(ev){
 
   newWidth = Math.floor(Math.random()*w);
   newHeight = Math.floor(Math.random()*h);
@@ -25,7 +25,7 @@ function onMouseMove(){
 
 function setUp() {
   //outputContainer = document.getElementById('output');
-  gomb.addEventListener('click', onClick);
+  gomb.addEventListener('click', onMouseMove);
 }
 
 document.addEventListener('DOMContentLoaded', setUp);
