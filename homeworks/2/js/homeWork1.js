@@ -27,6 +27,7 @@ function setUp() {
   //outputContainer = document.getElementById('output');
   gomb = document.getElementById('gomb');
   gomb.addEventListener('mousemove', onMouseMove);
+  gomb.addEventListener('click', onClick);
 }
 
 document.addEventListener('DOMContentLoaded', setUp);
