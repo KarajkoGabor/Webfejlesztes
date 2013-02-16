@@ -21,6 +21,8 @@ function onMouseMove(ev){
   gomb.style.position="absolute";
   gomb.style.left=newWidth+"px";
   gomb.style.top=newHeight+"px";
+
+    setbackground();
 }
 
 
@@ -59,7 +61,6 @@ document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValu
 function setUp() {
   //outputContainer = document.getElementById('output');
   gomb = document.getElementById('gomb');
-  setbackground();
   gomb.addEventListener('mousemove', onMouseMove);
   gomb.addEventListener('click', onClick);
 }
