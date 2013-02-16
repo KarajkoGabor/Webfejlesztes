@@ -1,25 +1,25 @@
 var clickMe = {
   gomb:null,
 
-  onClick:function(ev) { //click
+  onClick: function(ev) { //click
     window.alert("Ügyes vagy! De lehet hogy csaltál ;) ");
   },
 
-  onMouseMove:function(ev){
+  onMouseMove: function(ev){
 
     var w = 800, h = 600; // width and height
 
     clickMe.gomb = document.getElementById('gomb'); //gomb
     newWidth = Math.floor(Math.random()*w); //random width
     newHeight = Math.floor(Math.random()*h); //random height
-    clickMe.gomb.style.position="absolute"; //position
-    clickMe.gomb.style.left=newWidth+"px"; //left align
-    clickMe.gomb.style.top=newHeight+"px"; //top align
+    gomb.style.position="absolute"; //position
+    gomb.style.left=newWidth+"px"; //left align
+    gomb.style.top=newHeight+"px"; //top align
 
     clickMe.setbackground(); // random background when hovering the button
   },
 
-  setbackground:function ()
+  setbackground: function()
   {
     var letters = '0123456789ABCDEF'.split(''); // letters
     var color = '#'; // hex first letter
@@ -31,7 +31,7 @@ var clickMe = {
 
   },
 
-  setUp:function () {
+  setUp: function(){
     clickMe.gomb = document.getElementById('gomb'); 
     clickMe.gomb.addEventListener('mousemove', clickMe.onMouseMove); //hovering listener
     clickMe.gomb.addEventListener('click', clickMe.onClick); //click listener
