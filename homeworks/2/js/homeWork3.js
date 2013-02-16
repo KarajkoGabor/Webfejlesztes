@@ -1,5 +1,6 @@
 
 var clickMe = (function(){
+  "use strict";
 var gomb;
 
 function onClick(ev) { //click
