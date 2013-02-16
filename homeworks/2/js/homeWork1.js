@@ -1,12 +1,6 @@
 var gomb;
 
-function createNewOutput(msg) {
-  var li = document.createElement('li');
-  li.innerHTML = msg;
-  outputContainer.appendChild(li);
-}
-
-function onClick(ev) {
+function onClick(ev) { //click
   window.alert("Ügyes vagy! De lehet hogy csaltál ;) ");
 }
 
@@ -14,34 +8,32 @@ function onMouseMove(ev){
 
   var w = 800, h = 600; // width and height
 
-  gomb = document.getElementById('gomb');
-  newWidth = Math.floor(Math.random()*w);
-  newHeight = Math.floor(Math.random()*h);
-  gomb.style.position="absolute";
-  gomb.style.left=newWidth+"px";
-  gomb.style.top=newHeight+"px";
+  gomb = document.getElementById('gomb'); //gomb
+  newWidth = Math.floor(Math.random()*w); //random width
+  newHeight = Math.floor(Math.random()*h); //random height
+  gomb.style.position="absolute"; //position
+  gomb.style.left=newWidth+"px"; //left align
+  gomb.style.top=newHeight+"px"; //top align
 
-  setbackground();
+  setbackground(); // random background when hovering the button
 }
-
-
 
 function setbackground()
 {
-    var letters = '0123456789ABCDEF'.split('');
-    var color = '#';
+    var letters = '0123456789ABCDEF'.split(''); // letters
+    var color = '#'; // hex first letter
     for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.round(Math.random() * 15)];
+        color += letters[Math.round(Math.random() * 30)]; //random numbers
     }
 
-document.getElementsByTagName("body")[0].style.backgroundColor = color;
+document.getElementsByTagName("body")[0].style.backgroundColor = color; //set the color
 
 }
 
 function setUp() {
   //outputContainer = document.getElementById('output');
-  gomb = document.getElementById('gomb');
-  gomb.addEventListener('mousemove', onMouseMove);
-  gomb.addEventListener('click', onClick);
+  gomb = document.getElementById('gomb'); 
+  gomb.addEventListener('mousemove', onMouseMove); //hovering listener
+  gomb.addEventListener('click', onClick); //click listener
 }
-document.addEventListener('DOMContentLoaded', setUp);
+document.addEventListener('DOMContentLoaded', setUp); //if content loaded
