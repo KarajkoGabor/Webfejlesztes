@@ -10,11 +10,11 @@ function createNewOutput(msg) {
 }
 
 function onClick(ev) {
-  //createNewOutput( ++counter + '. kattintás');
-  onMouseMove;
+  window.alert("Ügyes vagy!");
 }
 
 function onMouseMove(ev){
+
   gomb = document.getElementById('gomb');
   newWidth = Math.floor(Math.random()*w);
   newHeight = Math.floor(Math.random()*h);
