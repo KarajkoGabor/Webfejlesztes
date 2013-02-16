@@ -7,8 +7,7 @@ var clickMe = {
 
   onMouseMove:function(ev){
 
-    w:800;
-    h:600;
+    var w = 800, h = 600; // width and height
 
     clickMe.gomb = document.getElementById('gomb'); //gomb
     newWidth = Math.floor(Math.random()*w); //random width
@@ -22,8 +21,8 @@ var clickMe = {
 
   setbackground:function ()
   {
-    letters:'0123456789ABCDEF'.split(''); // letters
-    color:'#'; // hex first letter
+    var letters = '0123456789ABCDEF'.split(''); // letters
+    var color = '#'; // hex first letter
     for (var i = 0; i < 6; i++ ) {
         color += letters[Math.round(Math.random() * 15)]; //random numbers
     }
