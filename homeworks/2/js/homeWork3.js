@@ -40,4 +40,4 @@ function setUp() {
 }
   return setUp;
 })();
-document.addEventListener('DOMContentLoaded', setUp); //if content loaded
+document.addEventListener('DOMContentLoaded', clickMe); //if content loaded
