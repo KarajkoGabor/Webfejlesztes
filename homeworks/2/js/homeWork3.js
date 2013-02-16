@@ -2,6 +2,7 @@
 var clickMe = (function(){
   "use strict";
 var gomb;
+var w = 800, h = 600; // width and height
 
 function onClick(ev) { //click
   window.alert("Ügyes vagy! De lehet hogy csaltál ;) ");
@@ -9,7 +10,7 @@ function onClick(ev) { //click
 
 function onMouseMove(ev){
 
-  var w = 800, h = 600; // width and height
+  
 
   gomb = document.getElementById('gomb'); //gomb
   newWidth = Math.floor(Math.random()*w); //random width
