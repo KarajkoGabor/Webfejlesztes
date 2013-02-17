@@ -5,14 +5,13 @@ var clickMe = (function () {
         function setbackground() {
             var letters = '0123456789ABCDEF'.split(''),  //letters
                 color = '#', // hex first letter
-                backgroundColorVariable = document.getElementsByTagName("body")[0].style.backgroundColor,
                 i;
 
             for (i = 0; i < 6; i += 1) {
                 color += letters[Math.round(Math.random() * 15)]; //random numbers
             }
 
-             backgroundColorVariable = color; //set the color
+            document.getElementsByTagName("body")[0].style.backgroundColor = color; //set the color
         }
 
         function onClick() { //click
