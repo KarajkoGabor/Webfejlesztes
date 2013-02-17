@@ -4,11 +4,11 @@ var clickMe = (function(){
 var gomb;
 
 
-function onClick(ev) { //click
+function onClick() { //click
   window.alert("Ügyes vagy! De lehet hogy csaltál ;) ");
 }
 
-function onMouseMove(ev){
+function onMouseMove(){
 
   var w = 800, h = 600; // width and height
 
