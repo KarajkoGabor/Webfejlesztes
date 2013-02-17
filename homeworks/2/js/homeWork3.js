@@ -6,7 +6,7 @@ var clickMe = (function () {
         var gomb;
 
         function setbackground() {
-            var letters = '0123456789ABCDEF'.split(''),  //letters
+            var letters = ['0123456789ABCDEF'].split(''),  //letters
                 color = '#', // hex first letter
                 i;
 
