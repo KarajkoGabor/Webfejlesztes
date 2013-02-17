@@ -1,5 +1,8 @@
 var clickMe = (function () {
         "use strict";
+
+        /*jslint browser:true */
+        /*global document: false */
         var gomb;
 
         function setbackground() {
@@ -41,5 +44,5 @@ var clickMe = (function () {
 
         return setUp;
 
-    })();
+    }());
 document.addEventListener('DOMContentLoaded', clickMe); //if content loaded
