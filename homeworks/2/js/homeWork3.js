@@ -1,46 +1,46 @@
+var clickMe = (function () {
+        "use strict";
+        var gomb;
 
-var clickMe = (function(){
-  "use strict";
-var gomb;
+        function setbackground() {
+            var letters = '0123456789ABCDEF'.split(''),  //letters
+                color = '#', // hex first letter
+                backgroundColorVariable = document.getElementsByTagName("body")[0].style.backgroundColor,
+                i;
 
+            for (i = 0; i < 6; i += 1) {
+                color += letters[Math.round(Math.random() * 15)]; //random numbers
+            }
 
-function onClick() { //click
-  window.alert("Ügyes vagy! De lehet hogy csaltál ;) ");
-}
+             backgroundColorVariable = color; //set the color
+        }
 
-function onMouseMove(){
+        function onClick() { //click
+            window.alert("Ügyes vagy! De lehet hogy csaltál ;) ");
+        }
 
-  var w = 800, h = 600; // width and height
+        function onMouseMove() {
 
-  gomb = document.getElementById('gomb'); //gomb
-  var newWidth = Math.floor(Math.random()*w); //random width
-  var newHeight = Math.floor(Math.random()*h); //random height
-  gomb.style.position="absolute"; //position
-  gomb.style.left=newWidth+"px"; //left align
-  gomb.style.top=newHeight+"px"; //top align
+            var w = 800,
+                h = 600,
+                newWidth = Math.floor(Math.random() * w),
+                newHeight = Math.floor(Math.random() * h);
 
-  setbackground(); // random background when hovering the button
-}
+            gomb = document.getElementById('gomb'); //gomb
+            gomb.style.position = "absolute"; //position
+            gomb.style.left = newWidth + "px"; //left align
+            gomb.style.top = newHeight + "px"; //top align
 
-function setbackground()
-{
-    var letters = '0123456789ABCDEF'.split(''); // letters
-    var color = '#'; // hex first letter
-    for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.round(Math.random() * 15)]; //random numbers
-    }
+            setbackground(); // random background when hovering the button
+        }
 
-document.getElementsByTagName("body")[0].style.backgroundColor = color; //set the color
+        function setUp() {
+            gomb = document.getElementById('gomb');
+            gomb.addEventListener('mousemove', onMouseMove); //hovering listener
+            gomb.addEventListener('click', onClick); //click listener
+        }
 
-}
+        return setUp;
 
-function setUp() {
-  //outputContainer = document.getElementById('output');
-  gomb = document.getElementById('gomb'); 
-  gomb.addEventListener('mousemove', onMouseMove); //hovering listener
-  gomb.addEventListener('click', onClick); //click listener
-}
-  return setUp;
-
-})();
+    })();
 document.addEventListener('DOMContentLoaded', clickMe); //if content loaded
