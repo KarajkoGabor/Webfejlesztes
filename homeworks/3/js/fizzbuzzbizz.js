@@ -11,10 +11,16 @@ var fizzBuzzBizz = (function () {
   }
 
   function onClick() {
-    createNewOutput("out");
+    fBBWriter;
   }
 
+function fBBWriter(){
 
+            for (var i = 0; i < 100; i++) {
+                    createNewOutput(i);
+                }    
+
+        } 
 
   function setUp() {
     gomb = document.getElementById('gomb');
