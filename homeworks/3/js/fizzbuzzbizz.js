@@ -45,7 +45,7 @@ var fizzBuzzBizz = (function () {
         function setUp() {
             gomb = document.getElementById('gomb');
 
-            outputContainer = document.getElementById('fbb_output');
+            outputContainer = document.getElementById('output');
             gomb.addEventListener('click', onClick); //click listener
         }
 
