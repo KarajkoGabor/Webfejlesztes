@@ -16,18 +16,20 @@ var fizzBuzzBizz = (function () {
            for (i = 1; i <= 100; i++) {
                     if((i%3)== 0)
                         counter = i + ' : fizz';
-                    if((i%5)== 0)
+                    else if((i%5)== 0)
                         counter = i + ' : buzz';
-                    if((i%7)== 0)
+                    else if((i%7)== 0)
                         counter = i + ' : bizz';
-                    if((i%3)== 0 && (i%5)==0)
+                    else if((i%3)== 0 && (i%5)==0)
                         counter = i + ' : fizzbuzz';
-                    if((i%3)== 0 && (i%7)==0)
+                    else if((i%3)== 0 && (i%7)==0)
                         counter = i + ' : fizzbizz';
-                    if((i%7)== 0 && (i%5)==0)
+                    else if((i%7)== 0 && (i%5)==0)
                         counter = i + ' : buzzbizz';
-                    if((i%3)== 0 && (i%5)==0 && (i%7)==0)
+                    else if((i%3)== 0 && (i%5)==0 && (i%7)==0)
                         counter = i + ' : fizzbuzzbizz';
+                    else
+                        counter = i;
                 createNewOutput(counter);
             }    
     
