@@ -8,6 +8,10 @@ var fizzBuzzBizz = (function () {
             outputContainer.appendChild(li);
         }
 
+        function onClick(ev) {
+            fBBWriter();
+        }
+
         function fBBWriter(){
 
             for (var i = 0; i < 100; i++) {
@@ -39,9 +43,11 @@ var fizzBuzzBizz = (function () {
         } 
 
         function setUp() {
-            fBBWriter();
             Output("out");
+            gomb = document.getElementById('gomb');
+
             outputContainer = document.getElementById('fbb_output');
+            gomb.addEventListener('click', onClick); //click listener
         }
 
 
