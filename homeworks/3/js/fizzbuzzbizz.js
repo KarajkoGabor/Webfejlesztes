@@ -13,8 +13,9 @@ var fizzBuzzBizz = (function () {
 
   function fBBWriter(){
 
-           for (i = 0; i < 100; i++) {
-                    createNewOutput(i);
+           for (i = 1; i <= 100; i++) {
+                    if((i%3)== 0)
+                        createNewOutput(i);
             }    
 
 } 
