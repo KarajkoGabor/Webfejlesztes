@@ -34,7 +34,7 @@ var fizzBuzzBizz = (function () {
                         fizzOut = i + ": fizzbuzzbizz";
                     }
                     Output(fizzOut);
-                };    
+                }    
 
         } 
 
