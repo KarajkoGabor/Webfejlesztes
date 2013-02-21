@@ -10,7 +10,7 @@ var fizzBuzzBizz = (function () {
 
         function onClick(ev) {
             //fBBWriter();
-            Output("out");
+            Output(1);
 
         }
 
