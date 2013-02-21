@@ -10,17 +10,19 @@ var fizzBuzzBizz = (function () {
     outputContainer.appendChild(li);
   }
 
-  function onClick() {
-    fBBWriter();
-  }
-
-function fBBWriter(){
+  function fBBWriter(){
 
            // for (var i = 0; i < 100; i++) {
                     createNewOutput(i++);
                 //}    
 
 } 
+
+  function onClick() {
+    fBBWriter();
+  }
+
+
 
   function setUp() {
     gomb = document.getElementById('gomb');
