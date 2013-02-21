@@ -15,9 +15,9 @@ var fizzBuzzBizz = (function () {
 
            for (i = 1; i <= 100; i++) {
                     if((i%3)== 0)
-                        createNewOutput(i);
+                        counter = i + ' : fizz';
             }    
-
+    createNewOutput(counter);
 } 
 
   function onClick() {
