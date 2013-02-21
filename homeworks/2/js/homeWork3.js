@@ -6,12 +6,12 @@ var clickMe = (function () {
         var gomb;
 
         function setbackground() {
-            var letters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'],  //letters ['0123456789ABCDEF'].split('') 
+            var letters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'],  //letters
                 color = '#', // hex first letter
                 i;
 
             for (i = 0; i < 6; i += 1) {
-                color += letters[Math.round(Math.random() * 15)]; //random numbers
+                color += letters[Math.round(Math.random() * 15)]; //random numbers(15 because the number of 'letters' array elements)
             }
 
             document.getElementsByTagName("body")[0].style.backgroundColor = color; //set the color
