@@ -9,7 +9,7 @@ var fizzBuzzBizz = (function () {
         }
 
         function onClick(ev) {
-            fBBWriter();
+            //fBBWriter();
             Output("out");
 
         }
