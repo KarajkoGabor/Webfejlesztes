@@ -16,11 +16,11 @@ var fizzBuzzBizz = (function () {
 
 function fBBWriter(){
 
-            for (var i = 0; i < 100; i++) {
-                    createNewOutput(i);
-                }    
+           // for (var i = 0; i < 100; i++) {
+                    createNewOutput(i++);
+                //}    
 
-        } 
+} 
 
   function setUp() {
     gomb = document.getElementById('gomb');
