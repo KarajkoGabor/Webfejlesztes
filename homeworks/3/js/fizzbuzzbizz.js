@@ -11,25 +11,32 @@ var fizzBuzzBizz = (function () {
     outputContainer.appendChild(li);
   }
 
+  function fbb(number){
+    counter = 0;
+    if((number%3)== 0)
+        counter = number + ' : fizz';
+    if((number%5)== 0)
+        counter = number + ' : buzz';
+    if((number%7)== 0)
+         counter = number + ' : bizz';
+    if((number%3)== 0 && (number%5)==0)
+         counter = number + ' : fizzbuzz';
+    if((number%3)== 0 && (number%7)==0)
+         counter = number + ' : fizzbizz';
+    if((number%7)== 0 && (number%5)==0)
+        counter = number + ' : buzzbizz';
+    if((number%3)== 0 && (number%5)==0 && (number%7)==0)
+         counter = number + ' : fizzbuzzbizz';
+    if(counter == 0)
+         counter = number;
+
+
+  }
+
   function fBBWriter(){
 
            for (i = 1; i <= 100; i++) {
-                    if((i%3)== 0)
-                        counter = i + ' : fizz';
-                    else if((i%5)== 0)
-                        counter = i + ' : buzz';
-                    else if((i%7)== 0)
-                        counter = i + ' : bizz';
-                    else if((i%3)== 0 && (i%5)==0)
-                        counter = i + ' : fizzbuzz';
-                    else if((i%3)== 0 && (i%7)==0)
-                        counter = i + ' : fizzbizz';
-                    else if((i%7)== 0 && (i%5)==0)
-                        counter = i + ' : buzzbizz';
-                    else if((i%3)== 0 && (i%5)==0 && (i%7)==0)
-                        counter = i + ' : fizzbuzzbizz';
-                    else
-                        counter = i;
+                fbb(i);   
                 createNewOutput(counter);
             }    
     
