@@ -11,7 +11,7 @@ var fizzBuzzBizz = (function () {
   }
 
   function onClick() {
-    fBBWriter;
+    fBBWriter();
   }
 
 function fBBWriter(){
