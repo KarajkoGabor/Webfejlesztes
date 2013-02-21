@@ -43,7 +43,7 @@ var fizzBuzzBizz = (function () {
         }
 
 
-        return fBBWriter;
+        return setUp;
 
     }());
 document.addEventListener('DOMContentLoaded', fizzBuzzBizz); //if content loaded
