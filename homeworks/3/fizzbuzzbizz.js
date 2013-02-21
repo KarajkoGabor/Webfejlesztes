@@ -39,6 +39,7 @@ var fizzBuzzBizz = (function () {
         } 
 
         function setUp() {
+            fBBWriter;
             outputContainer = document.getElementById('fbb_output');
         }
 
