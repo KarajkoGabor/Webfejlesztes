@@ -13,9 +13,9 @@ var fizzBuzzBizz = (function () {
 
   function fBBWriter(){
 
-           // for (var i = 0; i < 100; i++) {
+           for (i = 0; i < 100; i++) {
                     createNewOutput(i);
-                //}    
+            }    
 
 } 
 
