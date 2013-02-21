@@ -1,6 +1,6 @@
 var fizzBuzzBizz = (function () {
         "use strict";
-        var fizzOut, outputContainer;
+        var fizzOut, outputContainer,gomb;
 
         function createNewOutput(msg) {
             var li = document.createElement('li');
