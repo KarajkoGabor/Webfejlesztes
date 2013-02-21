@@ -2,16 +2,14 @@ var fizzBuzzBizz = (function () {
         "use strict";
         var fizzOut, outputContainer;
 
-        function Output(msg) {
+        function createNewOutput(msg) {
             var li = document.createElement('li');
             li.innerHTML = msg;
             outputContainer.appendChild(li);
         }
 
-        function onClick(ev) {
-            //fBBWriter();
-            Output(1);
-
+        function onClick() {
+            createNewOutput(++counter + '. kattintás');
         }
 
         function fBBWriter(){
