@@ -12,7 +12,7 @@ var fizzBuzzBizz = (function () {
 
             for (var i = 0; i < 100; i++) {
                     if((i % 3) == 0{
-                        //Output(i + ": fizz");
+                        Output(i + ": fizz");
                         fizzOut = i + ": fizz";
                     }else if((i % 7) == 0){
                         //Output(i + ": bizz");
