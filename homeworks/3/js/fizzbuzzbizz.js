@@ -3,6 +3,7 @@ var fizzBuzzBizz = (function () {
   "use strict";
   var gomb, outputContainer;
   var counter = 0;
+  var i = 0;
 
   function createNewOutput(msg) {
     var li = document.createElement('li');
@@ -19,7 +20,7 @@ var fizzBuzzBizz = (function () {
 } 
 
   function onClick() {
-    fBBWriter();
+    fBBWriter;
   }
 
 
