@@ -12,7 +12,7 @@ var fizzBuzzBizz = (function () {
             createNewOutput(++counter + '. kattintás');
         }
 
-        function fBBWriter(){
+        /*function fBBWriter(){
 
             for (var i = 0; i < 100; i++) {
                     if((i % 3) == 0{
@@ -40,7 +40,7 @@ var fizzBuzzBizz = (function () {
                     Output(fizzOut);
                 }    
 
-        } 
+        } */
 
         function setUp() {
             gomb = document.getElementById('gomb');
