@@ -4,7 +4,7 @@
   $().ready(function() {
     module("FizzBuzzBizz generátor");
     test("3==fizz", function() {
-      return equal(fizzBuzzBizz.setUp(), 3);
+      return equal(fbb(3), 3);
     });
     /*test("1==1", function() {
       return equal(fibonacci(1), 1);
@@ -16,7 +16,7 @@
       return equal(fibonacci(5), 5);
     });*/
     return test("13==13", function() {
-      return equal(fizzBuzzBizz.fbb(13), 13);
+      return equal(fbb(13), 13);
     });
   });
 
