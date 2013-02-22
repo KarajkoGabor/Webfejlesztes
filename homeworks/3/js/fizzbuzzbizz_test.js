@@ -4,7 +4,7 @@
   $().ready(function() {
     module("FizzBuzzBizz generátor");
     test("3==fizz", function() {
-      return equal(fbb(3), 'fizz');
+      return equal(fbb(3), 3 +' : fizz');
     });
     /*test("1==1", function() {
       return equal(fibonacci(1), 1);
