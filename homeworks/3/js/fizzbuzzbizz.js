@@ -50,9 +50,10 @@ var fizzBuzzBizz = (function () {
 
 
   function setUp() {
-    gomb = document.getElementById('gomb');
+    //gomb = document.getElementById('gomb');
     outputContainer = document.getElementById('output');
-    gomb.addEventListener('click', onClick);
+    //gomb.addEventListener('click', onClick);
+    fBBWriter();
   }
   return setUp;
 })();
