@@ -42,13 +42,7 @@ var fizzBuzzBizz = (function () {
                 createNewOutput(counter);
             }    
     
-} 
-
-  function onClick() {
-    fBBWriter();
-  }
-
-
+  } 
 
   function setUp() {
     //gomb = document.getElementById('gomb');
