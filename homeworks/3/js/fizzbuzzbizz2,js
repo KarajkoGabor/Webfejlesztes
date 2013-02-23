@@ -4,7 +4,7 @@ var fizzBuzzBizz = {
   createNewOutput: function(msg) {
     var li = document.createElement('li');
     li.innerHTML = msg;
-    outputContainer.appendChild(li);
+    fizzBuzzBizz.outputContainer.appendChild(li);
   },
 
 
