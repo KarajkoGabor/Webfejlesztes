@@ -31,6 +31,7 @@ var fizzBuzzBizz = (function () {
     if(counter == 0)
          counter = number;
 
+    return counter;
 
   }
 
