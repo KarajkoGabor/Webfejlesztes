@@ -82,9 +82,9 @@
         <script type="text/javascript">
 
           function showInfo( data ) {
-            _.each(data.artist, function(lf) {
-              $("#searchOutput").append(lf.name);
-            });
+            //_.each(data.artist, function(lf) {
+              $("#searchOutput").append(data.name);
+            //});
           }
 
             $('#search').click(function(ev){
