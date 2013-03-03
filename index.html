@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Webfejlesztes by KarajkoGabor</title>
+    <title>Webfejlesztés by KarajkoGabor</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/respond.js"></script>
+    <script type="text/javascript" src="homeworks/4/js/lastfm.api.md5.js"></script>
+    <script type="text/javascript" src="homeworks/4/js/lastfm.api.js"></script>
+    <script type="text/javascript" src="homeworks/4/js/lastfmsearch.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -21,8 +24,8 @@
       <div id="header">
         <nav>
           <li class="fork"><a href="https://github.com/KarajkoGabor/Webfejlesztes">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/KarajkoGabor/Webfejlesztes/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/KarajkoGabor/Webfejlesztes/tarball/master">TAR</a></li>
+          <!--<li class="downloads"><a href="https://github.com/KarajkoGabor/Webfejlesztes/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/KarajkoGabor/Webfejlesztes/tarball/master">TAR</a></li>-->
           <li class="title">DOWNLOADS</li>
         </nav>
       </div><!-- end header -->
@@ -31,7 +34,7 @@
 
       <section>
         <div id="title">
-          <h1>Webfejlesztes</h1>
+          <h1>Webfejlesztés a gyakorlatban</h1>
           <p></p>
           <hr>
           <span class="credits left">Project maintained by <a href="https://github.com/KarajkoGabor">KarajkoGabor</a></span>
@@ -65,7 +68,40 @@
             FizzBuzzBizz Test:
             <a href="homeworks/3/fizzbuzzbizz_test.html">FizzBuzzBizz</a></li>
           </ul>
-        
+
+        <h3>Negyedik házi feladat: last.fm</h3>
+        <!--
+        Keresés: <input id="searchInput" type="text" name="searchInput">
+        <div id="searchOutput"> </div>
+        -->
+        <script type="text/javascript">
+        $(function() {
+
+  /* Create a cache object */
+  var cache = new LastFMCache();
+
+  /* Create a LastFM object */
+  var lastfm = new LastFM({
+    apiKey    : 'dd5a33741258754e14204cbe9c9bdf1d',
+    apiSecret : 'aa459d1ebf42efdf95eeadb7ca3f1863',
+    cache     : cache
+  });
+
+  /* Load some artist info. */
+  lastfm.artist.getInfo({artist: 'Foo Fighters'}, {success: function(data){
+    /* Use data. */
+  }, error: function(code, message){
+    /* Show error message. */
+  }});
+
+  $('#searchInput').autocomplete({
+      target: $('#searchOutput'), 
+      targetHandler: function(data){},
+
+  });
+
+});
+      </script>        
       </section>
 
     </div>
