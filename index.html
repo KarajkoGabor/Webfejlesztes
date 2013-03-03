@@ -99,7 +99,7 @@
       
       $.getJSON(data,function(json){
         $.each(json.artist, function(i,artist_tag){
-          $("#searchOutput").html(artist_tag.name);
+          $("#searchOutput").append(artist_tag.name);
         });
 
       });
