@@ -1,0 +1,169 @@
+
+<!doctype html>
+<html lang="hu">
+	<head>
+		<meta charset="utf-8">
+		<title>LastFm</title>
+		<style>
+		#d{
+			float: left;
+			width: 20%;
+			height: 80px;
+			background: #4a5c6b;
+			padding: 10px;
+			margin: 5px;
+			border-radius: 3px;
+		}
+
+		#d a{
+			background-color: black;
+			padding: 4px;
+			color: white;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		#d a:hover{
+			background-color: orange;
+		}
+
+		#artist{
+			float: left;
+			width: 60%;
+			padding: 10px;
+			margin: 5px;
+			border-radius: 3px;
+			position: absolute;
+		}
+
+		#header{
+			color: white;
+			font-weight: bold;
+			background: #afad5b;
+			height: 100px;
+			padding: 16px;
+		}
+
+		#bio{
+			text-align: justify;
+		}
+
+		#stats span,
+		#tags span{
+			background-color: black;
+			padding: 2px;
+			margin: 3px 5px;
+		}
+
+		#name span{
+			font-size: 14pt;
+			font-weight: bold;
+			background-color: white;
+			padding: 3px;
+			color: black;
+		}
+
+		#similar span{
+			margin: 0px 10px;
+		}
+
+		#imgase img{
+			height: 100px;
+		}
+		</style>
+	</head>
+	<body>	
+		<form>
+			<input type="text" id="search" name="search">
+			<input type="submit" id="button" name="button" value="Keresés">
+			<input type="button" name="back" id="back" value="Vissza" />
+		</form>
+		
+		<div id="artist">
+			<div id="header">
+				<div id="name"></div>
+				<div id="tags"></div>
+				<div id="stats"></div>
+			</div>
+			<div id="bio"><b>Bio</b>:</div>
+			<div id="images"><b>Pictures</b>:<br></div>
+			<div id="similar"><b>Similar artists</b>:<br></div>
+		</div>
+
+		<div id="result"></div>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+		<script type="text/javascript" src="js/LastFm.js"></script>
+		<script type="text/javascript">
+			$('#artist').hide();
+			function showResult(data){
+				$('#result').html("");
+				$.each(data.results.artistmatches.artist, function(key, val) {
+					var div = document.createElement('div');
+					div.id = 'd';
+					div.style.border = '1px solid black';
+					div.style.background = '#4a5b6d url("'+ val["image"][1]["#text"] +'") center center repeat'; //val.image[1]["#text"];
+					div.innerHTML = '<a onClick="getArtistInfo(this.innerHTML);" href="#">'+ val.name + '</a>';
+					$('#result').append(div);
+				});
+			}
+
+			function eraseArtistBox(){
+				$('#name').html('');
+				$('#tags').html('');
+				$('#stats').html('');
+				$('#images').html('<b>Pictures</b>:<br>');
+				$('#bio').html('<b>Bio</b>:');
+				$('#similar').html('<b>Similar artists</b>:<br>');
+			}
+
+			function showArtist(data){
+				eraseArtistBox();
+				$('#result').hide();
+				
+				$('#header').css("background", "black url('" + data.artist.image[3]["#text"] + "') center center repeat");
+				
+				$('#name').append("<span>"+data.artist.name+"</span>");
+				
+				$('#stats').append("<span>Listeners: "+data.artist.stats.listeners+"</span>");
+				$('#stats').append("<span>Plays: "+data.artist.stats.playcount+"</span>");
+				
+				$.each(data.artist.tags.tag, function(i, val){
+					$('#tags').append("<span>"+val["name"]+"</span>");
+				});
+
+				$.each(data.artist.image, function(i, val){
+					$('#images').append("<img src="+val["#text"]+" height='100' />");
+				});
+
+				$.each(data["artist"]["similar"]["artist"], function(i, val){
+					$('#similar').append("<span>"+val["name"]+"</span>");
+				});
+
+				$('#bio').append(data.artist.bio.content);
+				$('#bio').append("<br><b>"+data.artist.bio.published+"</b>");
+				
+				$('#artist').show();
+			}
+
+			function getArtistInfo(artist){
+				LastFm.artistInfo(artist, showArtist);
+			}
+
+			function back(){
+				$('#artist').hide();
+				$('#result').show();
+			}
+
+			$('#button').click(function(ev){
+				ev.preventDefault();
+				back();
+				LastFm.search($('#search').val(), showResult);
+			});
+
+			$('#back').click(function(ev){
+				back();
+			});
+		</script>
+	</body>
+</html>
