@@ -92,12 +92,13 @@
   });
 
   /* Load some artist info. */
-  lastfm.artist.getInfo({artist: 'Metallica'}, {success: function(data){
+  lastfm.artist.getInfo({artist: 'Metallica',
+api_key:'dd5a33741258754e14204cbe9c9bdf1d'}, {success: function(data){
     /* Use data. */
       /*var url;
       url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + this.artist + "&api_key="+this.apiKey;*/
-      
-      $.getJSON(data,function(json){
+      var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist="+this.artist+"&api_key="+this.api_key+"&format=json"
+      $.getJSON(url,function(json){
         $.each(json.artist, function(i,artist_tag){
           $("#searchOutput").append(artist_tag.name);
         });
