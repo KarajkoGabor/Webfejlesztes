@@ -98,9 +98,9 @@
       $.getJSON(data,function(json){
         $.each(json.results, function(i,artist_tag){
           $("#searchOutput").html(artist_tag.name);
-        }
+        });
 
-      }
+      });
 
 
     //$("#searchOutput").html("Sikerült");
