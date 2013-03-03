@@ -90,10 +90,11 @@
   });
 
   /* Load some artist info. */
-  lastfm.artist.getInfo({artist: 'Foo Fighters'}, {success: function(data){
+  lastfm.artist.getInfo({artist: 'Metallica'}, {success: function(data){
     /* Use data. */
-    $("#searchOutput").html("Sikerült");
-    $("#searchOutput").append(data);
+
+    //$("#searchOutput").html("Sikerült");
+    $("#searchOutput").html(data);
   }, error: function(code, message){
     /* Show error message. */
     alert(code);
