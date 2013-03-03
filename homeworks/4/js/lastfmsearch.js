@@ -1,26 +1,26 @@
 $(function() {
 
-	/* Create a cache object */
-	var cache = new LastFMCache();
+          var artist;
 
-	/* Create a LastFM object */
-	var lastfm = new LastFM({
-		apiKey    : 'dd5a33741258754e14204cbe9c9bdf1d',
-		apiSecret : 'aa459d1ebf42efdf95eeadb7ca3f1863',
-		cache     : cache
-	});
+          artist = (function(){
 
-	/* Load some artist info. */
-	lastfm.artist.getInfo({artist: 'Foo Fighters'}, {success: function(data){
-		/* Use data. */
-	}, error: function(code, message){
-		/* Show error message. */
-	}});
+            function artist(){}
 
-	$('#searchInput').autocomplete({
-  		target: $('#searchOutput'), 
-  		targetHandler: function(data){},
+            artist.key="";
 
-	});
+            artist.getInfo = function(name, callback) {
+            var url;
+            url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json";
+            return $.ajax({
+              dataType: "jsonp",
+              url: url,
+              data: null,
+              success: callback,
+              crossDomain: true
+            });
+            };
 
-});
+             return Weather;
+      })();
+
+        }).call(this);

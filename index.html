@@ -14,7 +14,7 @@
     <script type="text/javascript" src="javascripts/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="javascripts/jquery-ui-1.10.1.custom.js"></script>
     <script type="text/javascript" src="javascripts/jquery-ui-1.10.1.custom.min.js"></script>
-    <!--<script type="text/javascript" src="homeworks/4/js/lastfmsearch.js"></script>-->
+    <script type="text/javascript" src="homeworks/4/js/lastfmsearch.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -80,45 +80,13 @@
         <div id="searchOutput"> </div>
         
         <script type="text/javascript">
-        $(function() {
-
-  /* Create a cache object */
-  var cache = new LastFMCache();
-
-  /* Create a LastFM object */
-  var lastfm = new LastFM({
-    apiKey    : 'dd5a33741258754e14204cbe9c9bdf1d',
-    apiSecret : 'aa459d1ebf42efdf95eeadb7ca3f1863',
-  });
-
-  /* Load some artist info. */
-  lastfm.artist.getInfo({
-    artist: 'Metallica',
-    api_key:'dd5a33741258754e14204cbe9c9bdf1d'
-    }, {success: function(data){
-    /* Use data. */
-      /*var url;
-      url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + this.artist + "&api_key="+this.apiKey;*/
-      var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json"
-      $.getJSON(url,function(json){
-        $("#searchOutput").append(json);
-        $.each(json.artist, function(i,artist_tag){
-          //$("#searchOutput").html("Sikerült");
-          //$("#searchOutput").append(artist_tag.name);
-        });
-
-      });
+          function showInfo( data ) {
+            _.each(data.artist, function(fc) {
+              $("#searchOutput").append(fc.name);
+            })
+          }
 
 
-    //$("#searchOutput").html("Sikerült");
-    //$("#searchOutput").html(data);
-  }, error: function(code, message){
-    /* Show error message. */
-    alert(code);
-    $("#searchOutput").html("Nem sikerült");
-  }});
-
-});
       </script>        
       </section>
 
