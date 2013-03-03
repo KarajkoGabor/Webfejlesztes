@@ -81,7 +81,7 @@
         
         <script type="text/javascript">
 
-        var container = document.getElementById('container');
+        /*var container = document.getElementById('container');
 
           function resetContainer() {
             container.innerHTML = '';
@@ -99,7 +99,44 @@
             $('#button').click(function(ev){
               ev.preventDefault();
               LastFm.artistInfo( input.val(), showInfo );
-            });
+            });*/
+
+/* Create a cache object */
+  var cache = new LastFMCache();
+
+  /* Create a LastFM object */
+  var lastfm = new LastFM({
+    apiKey    : 'dd5a33741258754e14204cbe9c9bdf1d',
+    apiSecret : 'aa459d1ebf42efdf95eeadb7ca3f1863',
+  });
+
+  /* Load some artist info. */
+  lastfm.artist.getInfo({
+    artist: 'Metallica',
+    api_key:'dd5a33741258754e14204cbe9c9bdf1d'
+    }, {success: function(data){
+    /* Use data. */
+      /*var url;
+      url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + this.artist + "&api_key="+this.apiKey;*/
+      var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json"
+      $.getJSON(url,function(json){
+        $("#searchOutput").append(json);
+        $.each(json.artist, function(i,artist_tag){
+          //$("#searchOutput").html("Sikerült");
+          //$("#searchOutput").append(artist_tag.name);
+        });
+
+      });
+
+
+    //$("#searchOutput").html("Sikerült");
+    //$("#searchOutput").html(data);
+  }, error: function(code, message){
+    /* Show error message. */
+    alert(code);
+    $("#searchOutput").html("Nem sikerült");
+  }});
+
 
 
       </script>       
