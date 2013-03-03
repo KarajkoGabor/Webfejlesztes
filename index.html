@@ -72,8 +72,9 @@
         <h3>Negyedik házi feladat: last.fm</h3>
         <!--
         Keresés: <input id="searchInput" type="text" name="searchInput">
+      -->
         <div id="searchOutput"> </div>
-        -->
+        
         <script type="text/javascript">
         $(function() {
 
@@ -90,6 +91,7 @@
   /* Load some artist info. */
   lastfm.artist.getInfo({artist: 'Foo Fighters'}, {success: function(data){
     /* Use data. */
+    $(".searchOutput").html("Sikerült");
   }, error: function(code, message){
     /* Show error message. */
   }});
