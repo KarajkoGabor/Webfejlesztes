@@ -99,11 +99,11 @@
     /* Use data. */
       /*var url;
       url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + this.artist + "&api_key="+this.apiKey;*/
-      var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist="+this.artist+"&api_key="+this.api_key+"&format=json"
+      var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json"
       $.getJSON(url,function(json){
         $.each(json.artist, function(i,artist_tag){
-          $("#searchOutput").html("Sikerült");
-          //$("#searchOutput").append(artist_tag.name);
+          //$("#searchOutput").html("Sikerült");
+          $("#searchOutput").append(artist_tag.name);
         });
 
       });
