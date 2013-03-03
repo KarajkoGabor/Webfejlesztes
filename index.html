@@ -83,7 +83,7 @@
 
           function showInfo( data ) {
             _.each(data.artist, function(lf) {
-              $("#searchOutput").html(lf.name);
+              $("#searchOutput").append(lf.name);
             });
           }
 
@@ -94,7 +94,7 @@
 
 
       </script>       
-      <button type="search" id="search">Search metallica</button> 
+      <button type="search" id="search">Button</button> 
       </section>
 
     </div>
