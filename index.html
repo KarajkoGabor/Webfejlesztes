@@ -83,18 +83,20 @@
 
           function showInfo( data ) {
             _.each(data.artist, function(lf) {
-              $("#searchOutput").append(lf.name);
+                var out = document.getElementById('searchOutput');
+                out.innerHTML = lf.name + lf.mbid;
+              //$("#searchOutput").append(lf.name);
             });
           }
 
-            $('#search').click(function(ev){
+            $('#button').click(function(ev){
               ev.preventDefault();
               LastFm.artistInfo( input.val(), showInfo );
             });
 
 
       </script>       
-      <button type="submit" id="search">Button</button> 
+      <button type="submit" id="button">Button</button> 
       </section>
 
     </div>
