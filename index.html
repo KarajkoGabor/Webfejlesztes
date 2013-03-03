@@ -92,6 +92,15 @@
   /* Load some artist info. */
   lastfm.artist.getInfo({artist: 'Metallica'}, {success: function(data){
     /* Use data. */
+      /*var url;
+      url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + this.artist + "&api_key="+this.apiKey;*/
+      
+      $.getJSON(url+query,function(json){
+        $.each(json.results, function(i,artist_tag){
+          $("#searchOutput").html(artist_tag.name);
+        }
+
+      }
 
 
     //$("#searchOutput").html("Sikerült");
