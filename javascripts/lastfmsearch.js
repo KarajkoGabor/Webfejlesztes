@@ -1,14 +1,14 @@
 (function() {
 
-          var artist;
+          var lastFm
 
-          artist = (function(){
+          lastFm = (function(){
 
-            function artist(){}
+            function lastFm(){}
 
             //artist.key="";
 
-            artist.getInfo = function(name, callback) {
+            lastFm.getInfo = function(name, callback) {
             var url;
             url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json";
             return $.ajax({
@@ -20,9 +20,9 @@
             });
             };
 
-             return artist;
+             return lastFm;
       })();
 
-        window.artist = artist;
+        window.lastFm = lastFm;
 
         }).call(this);
