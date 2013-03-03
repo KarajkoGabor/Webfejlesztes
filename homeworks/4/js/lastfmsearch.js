@@ -20,7 +20,7 @@ $(function() {
             });
             };
 
-             return Weather;
+             return artist;
       })();
 
         }).call(this);
