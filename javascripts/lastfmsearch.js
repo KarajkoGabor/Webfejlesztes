@@ -46,7 +46,7 @@
                             return $.ajax({
                                     type: 'GET',
                                     dataType: 'json',
-                                    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json',                                    crossDomain: true
+                                    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=89e0b564ee2e75b41989a182288d7704&format=json',                                 crossDomain: true
                             });
                     };
      
