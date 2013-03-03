@@ -86,8 +86,14 @@
             })
           }
 
+            $('#search').click(function(ev){
+              ev.preventDefault();
+              artist.getInfo( input.val(), showInfo );
+            });
 
-      </script>        
+
+      </script>       
+      <button type="search" id="search">Search metallica</button> 
       </section>
 
     </div>
