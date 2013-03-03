@@ -81,10 +81,17 @@
         
         <script type="text/javascript">
 
+        var container = document.getElementById('container');
+
+          function resetContainer() {
+            container.innerHTML = '';
+          }
+
           function showInfo( data ) {
             _.each(data.artist, function(lf) {
-                var out = document.getElementById('searchOutput');
-                out.innerHTML = lf.name + lf.mbid;
+                  var p = document.createElement('p');
+                  p.innerHTML = lf.name;
+                  container.appendChild(p);
               //$("#searchOutput").append(lf.name);
             })
           }
