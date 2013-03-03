@@ -93,8 +93,8 @@
   lastfm.artist.getInfo({artist: 'Metallica'}, {success: function(data){
     /* Use data. */
 
-    //$("#searchOutput").html("Sikerült");
-    $("#searchOutput").html(data);
+    $("#searchOutput").html("Sikerült");
+    //$("#searchOutput").html(data);
   }, error: function(code, message){
     /* Show error message. */
     alert(code);
