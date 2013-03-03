@@ -92,9 +92,8 @@
   /* Load some artist info. */
   lastfm.artist.getInfo({artist: 'Metallica'}, {success: function(data){
     /* Use data. */
-     xmlDoc = $.parseXML(data),
-      $xml = $( xmlDoc ),
-      $artist = $xml.find( "name" );
+     var obj = jQuery.parseJSON(data);
+      alert( obj.name );
 
 
     $("#searchOutput").html("Sikerült");
