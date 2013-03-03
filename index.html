@@ -92,10 +92,10 @@
   lastfm.artist.getInfo({artist: 'Foo Fighters'}, {success: function(data){
     /* Use data. */
 
-    $(".searchOutput").html("Sikerült");
+    $("#searchOutput").html("Sikerült");
   }, error: function(code, message){
     /* Show error message. */
-    $(".searchOutput").html("Nem sikerült");
+    $("#searchOutput").html("Nem sikerült");
   }});
 
   $('#searchInput').autocomplete({
