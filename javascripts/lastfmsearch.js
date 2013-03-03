@@ -1,52 +1,46 @@
-/*(function() {
+/* index.htmlben volt
+  var cache = new LastFMCache();
 
-          var lastFm
 
-          lastFm = (function(){
+  var lastfm = new LastFM({
+    apiKey    : 'dd5a33741258754e14204cbe9c9bdf1d',
+    apiSecret : 'aa459d1ebf42efdf95eeadb7ca3f1863',
+  });
 
-            function lastFm(){}
 
-            //artist.key="";
+  lastfm.artist.getInfo({
+    artist: 'Metallica',
+    api_key:'dd5a33741258754e14204cbe9c9bdf1d'
+    }, {success: function(data){
+      var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json"
+      $.getJSON(url,function(json){
+        $("#searchOutput").append(json);
+        $.each(json.artist, function(i,artist_tag){
 
-            lastFm.getInfo = function(name, callback) {
-            var url;
-            url = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json';
-            return $.ajax({
-              type : 'GET',
-              dataType: 'json',
-              url: url,
-              success: callback,
-              crossDomain: true
-            });
-            };
+        });
 
-             return lastFm;
-      })();
+      });
 
-        window.lastFm = lastFm;
 
-        }).call(this);*/
+
+  }, error: function(code, message){
+
+    alert(code);
+    $("#searchOutput").html("Nem sikerült");
+  }});*/
+
+
     (function(){
             "use strict";
             var lastFm;
             lastFm  = (function(){
                     function lastFm(){}
      
-                    LastFm.search = function(query, callback){
-                            return $.ajax({
-                                    type: 'GET',
-                                    datatype: 'json',
-                                    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + query + '&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json',
-                                    success: callback,
-                                    crossDomain: true
-                            });
-                    };
-     
                     lastFm.getInfo = function(artist, callback){
                             return $.ajax({
                                     type: 'GET',
                                     dataType: 'json',
-                                    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + artist + '&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json',                                    crossDomain: true
+                                    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json',                                    crossDomain: true
                             });
                     };
      
