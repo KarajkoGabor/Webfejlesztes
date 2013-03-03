@@ -15,7 +15,6 @@
               type : 'GET',
               dataType: "json",
               url: url,
-              data: null,
               success: callback,
               crossDomain: true
             });
