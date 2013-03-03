@@ -83,13 +83,13 @@
 
           function showInfo( data ) {
             _.each(data.artist, function(lf) {
-              $("#searchOutput").append(lf.mbid);
+              $("#searchOutput").append(lf.name);
             });
           }
 
             $('#search').click(function(ev){
               ev.preventDefault();
-              LastFm.getInfo( input.val(), showInfo );
+              LastFm.artistInfo( input.val(), showInfo );
             });
 
 

@@ -32,21 +32,21 @@
             LastFm  = (function(){
                     function LastFm(){}
      
-                    LastFm.search = function(query, callback){
+                    /*LastFm.search = function(query, callback){
                             return $.ajax({
                                     type: 'GET',
                                     datatype: 'json',
-                                    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + query + '&api_key=89e0b564ee2e75b41989a182288d7704&format=json',
+                                    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + query + '&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json',
                                     success: callback,
                                     crossDomain: true
                             });
-                    };
+                    };*/
      
                     LastFm.artistInfo = function(artist, callback){
                             return $.ajax({
                                     type: 'GET',
                                     datatype: 'json',
-                                    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=89e0b564ee2e75b41989a182288d7704&format=json',
+                                    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Metallica&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json',
                                     success: callback,
                                     crossDomain: true
                             });
