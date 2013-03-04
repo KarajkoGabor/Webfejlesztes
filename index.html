@@ -89,10 +89,10 @@
           }
 
           function showInfo( data ) {
-            $.each(data.artist, function(i,lf) {
+            /*$(data.artist, function(i,lf) {
                   var p = document.createElement('p');
-                  p.innerHTML = lf;
-                  container.appendChild(p);
+                  p.innerHTML = lf;*/
+                  container.appendChild(data.artist.name);
               //$("#searchOutput").append(lf.name);
             })
           }
