@@ -89,9 +89,9 @@
           }
 
           function showInfo( data ) {
-            $.each(data.artist, function(lf) {
+            $.each(data.artist, function(i,lf) {
                   var p = document.createElement('p');
-                  p.innerHTML = lf;
+                  p.innerHTML = lf.name;
                   container.appendChild(p);
               //$("#searchOutput").append(lf.name);
             })
