@@ -89,7 +89,7 @@
           }
 
           function showInfo( data ) {
-            _.each(data.artist, function(lf) {
+            $.each(data.artist, function(lf) {
                   var p = document.createElement('p');
                   p.innerHTML = lf.name;
                   container.appendChild(p);
