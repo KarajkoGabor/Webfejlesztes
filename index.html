@@ -91,7 +91,7 @@
           function showInfo( data ) {
             $.each(data.artist, function(lf) {
                   var p = document.createElement('p');
-                  p.innerHTML = lf['name'];
+                  p.innerHTML = lf.mbid;
                   container.appendChild(p);
               //$("#searchOutput").append(lf.name);
             })
