@@ -95,12 +95,26 @@
           function showArtist( data ) {
             $.each(data.results.artistmatches.artist, function(i,a) {
                   var p = document.createElement('p');
+                  p.id = "artistSearchResult";
                   p.innerHTML = a.name;
                   container.appendChild(p);
                   //$('#searchOutput').append(data.results.artistmatches.artist);
               //$("#searchOutput").append(lf.name);
             });
           }
+
+          function showInfo(data){
+            $('#searchOutput').append(data.artist.name);
+          }
+
+          function showArtistInfo(chosen){
+            lastFm.getInfo(chosen,showInfo);
+          }
+
+          $("#artistSearchResult").click(function(ev){
+            ev.preventDefault();
+            showArtistInfo(this.innerHTML);
+          });
 
             $('#button').click(function(ev){
               resetContainer();
