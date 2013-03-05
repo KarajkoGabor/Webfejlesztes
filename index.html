@@ -107,7 +107,7 @@
                   p.id = "artistSearchResult";
                   p.innerHTML = data.results.artistmatches.artist.name;
                   var name = p.innerHTML;
-                  container.appendChild(p);
+                  //container.appendChild(p);
                   //$('#searchOutput').append(data.results.artistmatches.artist);
               //$("#searchOutput").append(lf.name);
 
@@ -122,7 +122,7 @@
             resetInfo();
             artistName= data.artist.name;
             $("#artistName").append(artistName);
-            $('#infoOutput').show("fold",{horizFirst: true},2000);
+            $('#infoOutput').show("fold",{},2000);
           }
 
           function showArtistInfo(chosen){
