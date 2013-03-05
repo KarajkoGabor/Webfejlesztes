@@ -103,20 +103,21 @@
                   var p = document.createElement('p');
                   p.id = "artistSearchResult";
                   p.innerHTML = data.results.artistmatches.artist.name;
+                  var name = p.innerHTML;
                   container.appendChild(p);
                   //$('#searchOutput').append(data.results.artistmatches.artist);
               //$("#searchOutput").append(lf.name);
 
-              $("#artistSearchResult").click(function(){
-                  showArtistInfo(this.innerHTML);
-              });
+              //$("#artistSearchResult").click(function(){
+                  showArtistInfo(name);
+              //});
 
            // });
           }
 
           function showInfo(data){
             resetInfo();
-            $($('#infoOutput').append(data.artist.name)).show("fold",{true},1000);
+            $($('#infoOutput').append(data.artist.name)).show("fold",{},1000);
           }
 
           function showArtistInfo(chosen){
