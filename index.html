@@ -15,6 +15,17 @@
     <script type="text/javascript" src="javascripts/jquery-ui-1.10.1.custom.js"></script>
     <script type="text/javascript" src="javascripts/jquery-ui-1.10.1.custom.min.js"></script>
     <script type="text/javascript" src="javascripts/lastfmsearch.js"></script>
+    <style>
+      #infoOutput{
+        background: #CCCCCC;
+      }
+
+      #artistName{
+        padding-left: 50 px;
+      }
+
+    </style>
+
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -96,7 +107,7 @@
         var input = $("#searchBox");
         var container = document.getElementById('searchOutput');
         var info = document.getElementById('infoOutput');
-        info.style.background='#CCCCCC';
+        //info.style.background='#CCCCCC';
 
           function resetContainer() {
             container.innerHTML = '';
