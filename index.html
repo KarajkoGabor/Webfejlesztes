@@ -85,12 +85,12 @@
         <div id="searchOutput"> </div>
         
         <div id="infoOutput">
-          <div id="artistName"><div>
-          <a id="artistUrl"><a>
-          <div id="bioSummary"><div>
-          <div id="statsListeners"><div>
-          <div id="statsPlays"><div>
-          <image id="artistImage"></image>
+          <div id="artistName">Név<div>
+          <a id="artistUrl">Url<a>
+          <div id="bioSummary">Bio<div>
+          <div id="statsListeners">Listeners<div>
+          <div id="statsPlays">Plays<div>
+          <image id="artistImage">Image</image>
         </div>
         
         <script type="text/javascript">
@@ -127,6 +127,7 @@
           function showInfo(data){
             resetInfo();
             $('#infoOutput').show("fold",{},1000);
+
             $("#artistName").append(data.artist.name);
             $("#artistUrl").attr("href",data.artist.url);
             $("#artistUrl").append(data.artist.url);
