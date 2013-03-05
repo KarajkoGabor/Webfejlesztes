@@ -85,12 +85,11 @@
         <div id="searchOutput"> </div>
         
         <div id="infoOutput">
-          <div id="artistName">Név</div>
-          <a id="artistUrl">Url</a>
-          <div id="bioSummary">Bio</div>
-          <div id="statsListeners">Listeners</div>
-          <div id="statsPlays">Plays</div>
-          <img id="artistImage">Image</img>
+          <div id="artistName"></div>
+          <div id="statsListeners"></div>
+          <a id="artistUrl"></a>
+          <div id="bioSummary"></div>
+          <img id="artistImage"></img>
         </div>
         
         <script type="text/javascript">
@@ -133,8 +132,7 @@
             $("#artistUrl").append(data.artist.url);
             $("#bioSummary").append(data.artist.bio.summary);
             $("#statsListeners").append(data.artist.stats.listeners);
-            //$("#statsPlays").append(data.artist.stats.plays);
-            $("#artistImage").attr("src",data.artist.image[1]["#text"]);
+            $("#artistImage").attr("src",data.artist.image[2]["#text"]);
             
           }
 
