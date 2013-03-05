@@ -84,9 +84,9 @@
 
         <div id="searchOutput"> </div>
         <div id="infoOutput">
-          <div id="artistName"><div>
+          
         </div>
-      
+      <div id="artistName"><div>
         <script type="text/javascript">
         var input = $("#searchBox");
         var container = document.getElementById('searchOutput');
@@ -120,8 +120,8 @@
 
           function showInfo(data){
             resetInfo();
-            artistName= data.artist.name;
-            //$('#infoOutput').show("fold",{},1000);
+            var artistName= data.artist.name;
+            $('#infoOutput').show("fold",{},1000);
             $("#artistName").append(artistName);
             
           }
