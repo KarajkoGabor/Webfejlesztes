@@ -103,6 +103,7 @@
           }
 
             $('#button').click(function(ev){
+              resetContainer();
               ev.preventDefault();
               lastFm.getArtist(input.val(), showArtist );
             });
