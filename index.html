@@ -77,9 +77,13 @@
         <!--
         Keresés: <input id="searchInput" type="text" name="searchInput">
       -->
-        <button type="submit" id="button">Button</button>
+      <form>
+        <input type="text" id="searchBox"></input>
+        <button type="submit" id="button">Search</button>
+      </form>
+
         <div id="searchOutput"> </div>
-        
+      
         <script type="text/javascript">
 
         var container = document.getElementById('searchOutput');
@@ -88,18 +92,18 @@
             container.innerHTML = '';
           }
 
-          function showInfo( data ) {
+          function showArtist( data ) {
             /*$(data.artist, function(i,lf) {
                   var p = document.createElement('p');
                   p.innerHTML = lf;*/
-                  $('#searchOutput').append(data.artist.name);
+                  $('#searchOutput').append(data.results.artist.name);
               //$("#searchOutput").append(lf.name);
             //})
           }
 
             $('#button').click(function(ev){
               ev.preventDefault();
-              lastFm.getInfo('Metallica', showInfo );
+              lastFm.getArtist(input.val(), showInfo );
             });
 
 
