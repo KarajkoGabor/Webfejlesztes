@@ -103,7 +103,7 @@
               //$("#searchOutput").append(lf.name);
 
               $('p').click(function(){
-                  showArtistInfo(this.innerHTML);
+                  clickedArtist();
               });
 
             });
@@ -117,6 +117,9 @@
             lastFm.getInfo(chosen,showInfo);
           }
 
+          function clickedArtist(clicked){
+            showArtistInfo(clicked.innerHTML);
+          }
 
 
             $('#button').click(function(ev){
