@@ -83,8 +83,10 @@
       </form>
 
         <div id="searchOutput"> </div>
-        <div id="artistName"><div>
-        <div id="infoOutput"></div>
+        
+        <div id="infoOutput">
+          <div id="artistName"><div>
+        </div>
         
         <script type="text/javascript">
         var input = $("#searchBox");
@@ -137,6 +139,7 @@
             $('#button').click(function(ev){
               resetContainer();
               ev.preventDefault();
+              $('#infoOutput').hide("fold",{},1000);
               lastFm.getArtist(input.val(), showArtist );
             });
 
