@@ -17,7 +17,7 @@
     <script type="text/javascript" src="javascripts/lastfmsearch.js"></script>
     <style>
       #infoOutput{
-        background: #CCCCCC;
+        background: #2a2a29;
       }
 
       #artistName{
@@ -27,6 +27,7 @@
       #artistImage{
         position:relative;
         float:right;
+        border: #FFFFFF;
       }
 
     </style>
@@ -121,7 +122,13 @@
           }
 
           function resetInfo() {
-            info.text = '';
+            info.html = '';
+            $("#artistName").html="";
+            $("#artistUrl").html="";
+            $("#artistUrl").html="";
+            $("#bioSummary").html="";
+            $("#statsListeners").html="";
+            $("#artistImage").html="";
           }
 
           function showArtist( data ) {
