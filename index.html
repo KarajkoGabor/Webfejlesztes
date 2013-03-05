@@ -86,20 +86,25 @@
         
         <div id="infoOutput">
           <div id="artistName"><div>
+          <a id="artistUrl"><a>
+          <div id="bioSummary"><div>
+          <div id="statsListeners"><div>
+          <div id="statsPlays"><div>
+          <image id="artistImage"></image>
         </div>
         
         <script type="text/javascript">
         var input = $("#searchBox");
         var container = document.getElementById('searchOutput');
-        var info = document.getElementById('artistName');
-        info.style.background='#CCFF99';
+        var info = document.getElementById('infoOutput');
+        info.style.background='#FFFFFF';
 
           function resetContainer() {
             container.innerHTML = '';
           }
 
           function resetInfo() {
-            info.innerHTML = '';
+            info.html = '';
           }
 
           function showArtist( data ) {
@@ -121,9 +126,14 @@
 
           function showInfo(data){
             resetInfo();
-            var artistName= data.artist.name;
             $('#infoOutput').show("fold",{},1000);
-            $("#artistName").append(artistName);
+            $("#artistName").append(data.artist.name);
+            $("#artistUrl").attr("href",data.artist.url);
+            $("#artistUrl").append(data.artist.url);
+            $("#bioSummary").append(data.artist.bio.summary);
+            $("#statsPlays").append(data.artist.stats.plays);
+            $("#statsListeners").append(data.artist.stats.listeners);
+            $("#artistImage").attr("src",data.artist.image[1]);
             
           }
 
