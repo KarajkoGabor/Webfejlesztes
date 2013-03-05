@@ -94,7 +94,7 @@
           }
 
           function showArtist( data ) {
-            $.each(data.results.artistmatches.artist, function(i,a) {
+            //$.each(data.results.artistmatches.artist, function(i,a) {
                   var p = document.createElement('p');
                   p.id = "artistSearchResult";
                   p.innerHTML = a.name;
@@ -102,11 +102,11 @@
                   //$('#searchOutput').append(data.results.artistmatches.artist);
               //$("#searchOutput").append(lf.name);
 
-              $('p').click(function(){
-                  clickedArtist(p.innerHTML);
+              $("#artistSearchResult").click(function(){
+                  showArtistInfo(this.innerHTML);
               });
 
-            });
+           // });
           }
 
           function showInfo(data){
