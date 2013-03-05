@@ -101,6 +101,12 @@
                   container.appendChild(p);
                   //$('#searchOutput').append(data.results.artistmatches.artist);
               //$("#searchOutput").append(lf.name);
+
+              $("#artistSearchResult").click(function(){
+                  $('#infoOutput').append(this.innerHTML);
+                  showArtistInfo(this.innerHTML);
+              });
+              
             });
           }
 
@@ -112,10 +118,7 @@
             lastFm.getInfo(chosen,showInfo);
           }
 
-          $("#artistSearchResult").click(function(){
-            $('#infoOutput').append(this.innerHTML);
-            showArtistInfo(this.innerHTML);
-          });
+
 
             $('#button').click(function(ev){
               resetContainer();
