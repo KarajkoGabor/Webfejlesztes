@@ -83,6 +83,7 @@
       </form>
 
         <div id="searchOutput"> </div>
+        <div id="infoOutput"></div>
       
         <script type="text/javascript">
         var input = $("#searchBox");
@@ -104,7 +105,7 @@
           }
 
           function showInfo(data){
-            $('#searchOutput').append(data.artist.name);
+            $('#infoOutput').append(data.artist.name);
           }
 
           function showArtistInfo(chosen){
