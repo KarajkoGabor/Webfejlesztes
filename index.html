@@ -93,12 +93,13 @@
           }
 
           function showArtist( data ) {
-            /*$(data.artist, function(i,lf) {
+            $.each(data.results.artistmatches.artist, function(i,a) {
                   var p = document.createElement('p');
-                  p.innerHTML = lf;*/
-                  $('#searchOutput').append(data.results.artistmatches.artist);
+                  p.innerHTML = a.name;
+                  container.appendChild(p);
+                  //$('#searchOutput').append(data.results.artistmatches.artist);
               //$("#searchOutput").append(lf.name);
-            //})
+            });
           }
 
             $('#button').click(function(ev){
