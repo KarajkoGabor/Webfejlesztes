@@ -21,7 +21,7 @@
       }
 
       #artistName{
-        padding-left: 500 px;
+        padding: 50 px;
       }
 
     </style>
@@ -143,7 +143,7 @@
             $("#artistUrl").append(data.artist.url);
             $("#bioSummary").append(data.artist.bio.summary);
             $("#statsListeners").append(data.artist.stats.listeners);
-            $("#artistImage").attr("src",data.artist.image[2]["#text"]);
+            $("#artistImage").attr("src",data.artist.image[3]["#text"]);
             
           }
 
