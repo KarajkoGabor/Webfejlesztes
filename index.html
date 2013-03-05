@@ -134,7 +134,7 @@
             $("#bioSummary").append(data.artist.bio.summary);
             $("#statsListeners").append(data.artist.stats.listeners);
             //$("#statsPlays").append(data.artist.stats.plays);
-            $("#artistImage").attr("src",data.artist.image[1]);
+            $("#artistImage").attr("src",data.artist.image[1]["#text"]);
             
           }
 
