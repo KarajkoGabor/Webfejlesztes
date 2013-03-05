@@ -113,6 +113,7 @@
           }
 
           $("#artistSearchResult").click(function(){
+            $('#infoOutput').append(this.innerHTML);
             showArtistInfo(this.innerHTML);
           });
 
