@@ -88,9 +88,14 @@
         <script type="text/javascript">
         var input = $("#searchBox");
         var container = document.getElementById('searchOutput');
+        var info = document.getElementById('infoOutput');
 
           function resetContainer() {
             container.innerHTML = '';
+          }
+
+          function resetInfo() {
+            info.innerHTML = '';
           }
 
           function showArtist( data ) {
@@ -110,6 +115,7 @@
           }
 
           function showInfo(data){
+            resetInfo();
             $('#infoOutput').append(data.artist.name);
           }
 
