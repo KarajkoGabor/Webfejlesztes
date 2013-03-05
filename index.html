@@ -121,8 +121,9 @@
           function showInfo(data){
             resetInfo();
             artistName= data.artist.name;
-            $("#artistName").append(artistName);
             $('#infoOutput').show("fold",{},2000);
+            $("#artistName").append(artistName);
+            
           }
 
           function showArtistInfo(chosen){
