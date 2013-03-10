@@ -97,7 +97,8 @@
         Keresés: <input id="searchInput" type="text" name="searchInput">
       -->
       <form>
-        <input type="text" id="searchBox"></input>
+        <input type="text" id="searchBox"></input> 
+        <input type="text" id="autoComplete">Autocomplete Test(in progress..)</input>
         <button type="submit" id="button">Search</button>
       </form>
 
@@ -180,7 +181,7 @@
 
           
 
-        /*$('#searchBox').autocomplete({
+        $('#autoComplete').autocomplete({
           source:lastFm.getArtist(input.val(),artistList),
           minLength: 3
         }); 
@@ -188,17 +189,19 @@
         function artistList(artists){
             var array = new Array();
             var k = 1;
+            var temp;
 
             $.each(artists.results.artistmatches.artist,function(i,j){
               //console.log(j.name);
-              array[k] = j.name;
+              temp = "\"" + j.name + "\"";
+              array[k] = temp;
               k++;
             
               console.log(array[k]);
             });
             return array;
 
-          }*/
+          }
 
 
       </script>       
