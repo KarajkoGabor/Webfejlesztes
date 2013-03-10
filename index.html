@@ -195,13 +195,13 @@
             });*/
             
 
-            return array;
+            
 
           } 
-          var array = ["Metallica","The Rolling Stones","The White Stripes"];
+          //var array = ["Metallica","The Rolling Stones","The White Stripes"];
 
         $('#autoComplete').autocomplete({
-          source:array,
+          source:lastFm.getArtist(input.val(),artistList),
           minLength: 3
         }); 
 
