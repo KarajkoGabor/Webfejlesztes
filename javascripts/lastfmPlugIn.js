@@ -47,7 +47,7 @@
                      //get target container
                      var out = (e),
                          //get items
-                         items = data.results.artistmatches.artist.name,
+                    var items = data.results.artistmatches.artist.name,
 
                          //get number of items
                          //n = items.length,
