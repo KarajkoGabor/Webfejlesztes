@@ -30,15 +30,12 @@
                                     success: function(data) {
                                          if(data) {
                                             if(window.console) {console.log('Completed!');}
+                                            console.log(data);
                                             _displayData(data,e);
                                         }
                                     }
                             });
                 
-
-
-                //code to be inserted here
-             
             });
 
             function _displayData(data,e) {
