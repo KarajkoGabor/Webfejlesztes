@@ -179,9 +179,9 @@
             });
 
           function artistList(artists){
-            console.log(artists);
-            var array = $.makeArray(artists);
-            //console.log(array[1]);
+            console.log(artists.results.artistmatches.artist.name);
+            var array = $.makeArray(artists.results.artistmatches.artist.name);
+            console.log(array[1]);
             return array;
           }
 
