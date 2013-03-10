@@ -178,26 +178,27 @@
               lastFm.getArtist(input.val(), showArtist );
             });
 
-          function artistList(artists){
-            var array = new Array();
-            var k = 1;
-
-            $.each(artists.results.artistmatches.artist,function(i,j){
-              console.log(j.name);
-              array[k] = j.name;
-              k++;
-            
-              console.log(array[1]);
-            });
-            return array;
-
-          }
+          
 
         $('#searchBox').autocomplete({
           source:lastFm.getArtist(input.val(),artistList),
           minLength: 3
         }); 
 
+        function artistList(artists){
+            var array = new Array();
+            var k = 1;
+
+            $.each(artists.results.artistmatches.artist,function(i,j){
+              //console.log(j.name);
+              array[k] = j.name;
+              k++;
+            
+              console.log(array[k]);
+            });
+            return array;
+
+          }
 
 
       </script>       
