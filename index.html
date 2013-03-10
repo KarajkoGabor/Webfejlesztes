@@ -12,7 +12,7 @@
     <script type="text/javascript" src="javascripts/lastfm.api.js"></script>
     <script type="text/javascript" src="javascripts/lastfm.api.cache.js"></script>-->
     <script type="text/javascript" src="javascripts/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="javascripts/jquery-ui-1.10.1.custom.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script type="text/javascript" src="javascripts/lastfmsearch.js"></script>
     <style>
       #infoOutput{
@@ -184,7 +184,8 @@
           }
 
         $('#searchBox').autocomplete({
-          source:lastFm.getArtist(input.val(),artistList)
+          source:lastFm.getArtist(input.val(),artistList),
+          minLength: 3
         }); 
 
 
