@@ -184,7 +184,7 @@
             var k = 1;
             var temp;
 
-            $.each(artists.results.artistmatches.artist,function(i,j){
+            /*$.each(artists.results.artistmatches.artist,function(i,j){
               
               temp = "\"" + j.name + "\"";
               console.log(temp);
@@ -192,14 +192,20 @@
               k++;
             
               console.log(array[k]);
-            });
+            });*/
+            array[0] = "Metallica";
+            array[1] = "Nirvana";
+            array[2] = "Nine Inch Nails";
+            array[3] = "The Rolling Stones";
+            array[4] = "The Doors";
+
             return array;
 
           } 
 
 
         $('#autoComplete').autocomplete({
-          source:lastFm.getArtist(input.val(),artistList),
+          source:artistList,
           minLength: 3
         }); 
 
