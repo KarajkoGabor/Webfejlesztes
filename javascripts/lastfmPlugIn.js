@@ -60,7 +60,7 @@
 
 
                          //loop through items and build the output
-                         for(var i=0;i<n;i++) {
+                         for(var i=0;i<3;i++) {
                             var li = document.createElement('li');
                             li.id = i;
                             li.innerHTML = items[i];
