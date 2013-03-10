@@ -179,12 +179,16 @@
             });
 
           function artistList(artists){
+            var array;
+
             $.each(artists.results.artistmatches.artist,function(i,j){
               console.log(j.name);
-            });
-            /*var array = $.makeArray(artists.results.artistmatches.artist.name);
+            
+            array = $.makeArray(j.name);
             console.log(array[1]);
-            return array;*/
+            });
+            return array;
+
           }
 
         $('#searchBox').autocomplete({
