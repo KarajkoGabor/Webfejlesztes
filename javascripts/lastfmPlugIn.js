@@ -8,9 +8,9 @@
         myLastFmAutoComplete: function(options) {
 
             var defaults = {
-                target = " ",
-                minLength = 3,
-                targetHandler = " ",
+                target : " ",
+                minLength : 3,
+                targetHandler : " ",
             };
 
             var options = $.extend(defaults,options);
