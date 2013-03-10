@@ -117,8 +117,11 @@
         var input = $("#searchBox");
         var container = document.getElementById('searchOutput');
         var info = document.getElementById('infoOutput');
-        //info.style.background='#CCCCCC';
        $('#infoOutput').hide();
+
+        $('#searchBox').autocomplete({
+          source:lastFm.getArtist(input.val())
+        });       
 
           function resetContainer() {
             container.innerHTML = '';
