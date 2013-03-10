@@ -179,13 +179,15 @@
             });
 
           function artistList(artists){
-            var array;
+            var array = new Array();
+            var k = 1;
 
             $.each(artists.results.artistmatches.artist,function(i,j){
               console.log(j.name);
+              array[k] = j.name;
+              k++;
             
-            array = $.makeArray(j.name);
-            console.log(array[1]);
+              console.log(array[1]);
             });
             return array;
 
