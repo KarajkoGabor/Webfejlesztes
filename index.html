@@ -179,14 +179,7 @@
               lastFm.getArtist(input.val(), showArtist );
             });
 
-          
-
-        $('#autoComplete').autocomplete({
-          source:lastFm.getArtist(input.val(),artistList),
-          minLength: 3
-        }); 
-
-        function artistList(artists){
+         function artistList(artists){
             var array = new Array();
             var k = 1;
             var temp;
@@ -202,7 +195,15 @@
             });
             return array;
 
-          }
+          } 
+          
+
+        $('#autoComplete').autocomplete({
+          source:lastFm.getArtist(input.val(),artistList),
+          minLength: 3
+        }); 
+
+
 
 
       </script>       
