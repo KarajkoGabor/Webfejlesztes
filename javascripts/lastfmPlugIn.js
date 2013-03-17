@@ -25,7 +25,7 @@
                     $.ajax({
                         type : 'GET',
                         dataType : 'json',
-                        url: 'http://ws.audioscrobbler.com/2.0/?method=artist.search&limit=3&artist='+searchable+'&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json', 
+                        url: 'http://ws.audioscrobbler.com/2.0/?method=artist.search&limit=5&artist='+searchable+'&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json', 
                         crossDomain: true,
                         success : function(data){ displayData(data); }
                     });
@@ -60,7 +60,7 @@
                         $.each(data.results.artistmatches.artist, function(i, val){
                         var div = document.createElement('div');
                         div.setAttribute("class", "match");
-                        div.style.backgroundImage = "url('" + val.image[1]['#text'] + "')";
+                        div.style.background="#252524";
 
                         var a = document.createElement('a');
                         a.href = val.url;
