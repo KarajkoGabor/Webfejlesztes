@@ -70,7 +70,7 @@
                         div.appendChild(a);
                         $('#'+options['target']).append(div);
                         });
-          
+          }
         }
         return this;
     });
