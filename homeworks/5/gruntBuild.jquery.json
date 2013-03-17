@@ -1,0 +1,26 @@
+{
+  "name": "gruntBuild",
+  "title": "gruntBuildTitl",
+  "description": "The best jQuery plugin ever.",
+  "version": "0.1.0",
+  "homepage": "http://karajkogabor.github.com/Webfejlesztes",
+  "author": {
+    "name": "KarajkoGabor",
+    "url": "http://karajkogabor.github.com/Webfejlesztes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KarajkoGabor/Webfejlesztes/tree/gh-pages/homeworks/5/grunt"
+  },
+  "bugs": "https://github.com/KarajkoGabor/Webfejlesztes/tree/gh-pages/homeworks/5/grunt/issues",
+  "licenses": [
+    {
+      "type": "karajkoGabor",
+      "url": "http://karajkogabor.github.com/Webfejlesztes/blob/master/LICENSE-karajkoGabor"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
