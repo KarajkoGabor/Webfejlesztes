@@ -71,8 +71,9 @@
                         $('#'+options['target']).append(div);
                         });
           }
+          return this;
         }
-        return this;
+        
     });
      
 //pass jQuery to the function,
