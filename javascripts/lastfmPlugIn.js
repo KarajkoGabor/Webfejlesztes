@@ -8,15 +8,31 @@
         myLastFmAutoComplete: function(options) {
 
             var defaults = {
-                target : " ",
+                target : 'results',
                 minLength : 3,
-                targetHandler : " ",
+                targetHandler : "displayData",
             };
 
             var options = $.extend(defaults,options);
  
+                $(this).keyup(function(){
+                    if(3<=$(this).val().length){
+                    search($(this).val());
+                    }
+                });
+
+            function searchArtist(searchable){
+                    $.ajax({
+                        type : 'GET',
+                        dataType : 'json',
+                        url: 'http://ws.audioscrobbler.com/2.0/?method=artist.search&limit=3&artist='+searchable+'&api_key=dd5a33741258754e14204cbe9c9bdf1d&format=json', 
+                        crossDomain: true,
+                        success : function(data){ displayData(data); }
+                    });
+            }
+
             //Iterate over the current set of matched elements
-            return this.each(function() {
+            /*return this.each(function() {
 
                 var o = options;
                 var artist = o.target;
@@ -31,47 +47,32 @@
                                          if(data) {
                                             if(window.console) {console.log('Completed!');}
                                             console.log(data);
-                                            _displayData(data,e);
+                                            displayData(data,e);
                                         }
                                     }
                             });
                 
-            });
+            });*/
 
-            function _displayData(data,e) {
+            function displayData(data,e) {
 
-                     var $e = $(e);
+                        $('#'+options['target']).html('');
+                        $.each(data.results.artistmatches.artist, function(i, val){
+                        var div = document.createElement('div');
+                        div.setAttribute("class", "match");
+                        div.style.backgroundImage = "url('" + val.image[1]['#text'] + "')";
 
-                     //var markup = options.tpl;
+                        var a = document.createElement('a');
+                        a.href = val.url;
+                        a.target = "_blank";
+                        a.innerHTML = val.name;
 
-                     //get target container
-                     var out = (e),
-                         //get items
-                    var items = data.results.artistmatches.artist.name,
-
-                         //get number of items
-                         //n = items.length,
-
-                         //init output is empty
-                         output = '',
-
-                         //create an element ul with id specified
-                         ul = $("<ul/>");
-
-
-                         //loop through items and build the output
-                         for(var i=0;i<3;i++) {
-                            var li = document.createElement('li');
-                            li.id = i;
-                            li.innerHTML = items[i];
-                            ul.append(li);
-                         }
-
-
-                         //append to the container target
-                         $e.append(ul);
+                        div.appendChild(a);
+                        $('#'+options['target']).append(div);
+                        });
           };
         }
+        return this;
     });
      
 //pass jQuery to the function,

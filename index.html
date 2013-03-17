@@ -103,7 +103,7 @@
         <button type="submit" id="button">Search</button>
       </form>
 
-        <div id="searchOutput"> </div>
+        <div id="autoOutput"> </div>
         
         <div id="infoOutput">
           <h2 id="artistName"></h2>
@@ -180,7 +180,7 @@
               lastFm.getArtist(input.val(), showArtist );
             });
 
-         function artistList(artists){
+         /*function artistList(artists){
             var array = ["Metallica","The Rolling Stones","The White Stripes"];
             var k = 1;
             var temp;
@@ -198,14 +198,17 @@
 
             
 
-          } 
+          //}
           //var array = ["Metallica","The Rolling Stones","The White Stripes"];
 
-        $('#autoComplete').myLastFmAutoComplete({
+        /*$('#autoComplete').myLastFmAutoComplete({
           target:input.val(),
           minLength: 3,
           targetHandler:$("#searchOutput"),
-        }); 
+        }); */
+          $('#autoComplete').myLastFmAutoComplete({
+            target : "autoOutput"
+          });
 
 
 
