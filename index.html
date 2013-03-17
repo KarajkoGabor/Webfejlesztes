@@ -14,7 +14,8 @@
     <script type="text/javascript" src="javascripts/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script type="text/javascript" src="javascripts/lastfmsearch.js"></script>
-    
+    <script type="text/javascript" src="javascripts/lastfmPlugIn.js"></script>
+
     <style>
       #infoOutput{
         background: #252524;
@@ -113,19 +114,16 @@
         
         <h3>Last.fm autocomplete plugin</h3>
 
-        <p></p>
-        Autocomplete<input type="text" id="autoComplete"></input>
+        <input type="text" id="autoComplete"></input>
         <div id="autoOutput"> </div>
 
         <script type="text/javascript">
         var input = $("#searchBox");
-        var container = document.getElementById('searchOutput');
+        
         var info = document.getElementById('infoOutput');
        $('#infoOutput').hide();
 
-          function resetContainer() {
-            container.innerHTML = '';
-          }
+
 
           function resetInfo() {
             info.html = '';
@@ -177,7 +175,7 @@
 
 
             $('#button').click(function(ev){
-              resetContainer();
+
               ev.preventDefault();
               $('#infoOutput').hide("fold",{},1000);
               lastFm.getArtist(input.val(), showArtist );
