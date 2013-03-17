@@ -17,7 +17,7 @@
  
                 $(this).keyup(function(){
                     if(3<=$(this).val().length){
-                    search($(this).val());
+                    searchArtist($(this).val());
                     }
                 });
 
